@@ -22,7 +22,7 @@ TEST(SoundexTestsuite, PadsWithZerosToEnsureThreeDigits) {
 TEST(SoundexTestsuite, CombinesDuplicateEncodingsSeparatedByVowels) {
     char soundex[5];
     generateSoundex("bbfcg", soundex);
-    ASSERT_STREQ(soundex, "A120");
+    ASSERT_STREQ(soundex, "B200");
 }
  
 TEST(SoundexTestsuite, UppercasesFirstLetter) {
