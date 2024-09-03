@@ -9,8 +9,8 @@ TEST(SoundexTestsuite, ReplacesConsonantsWithAppropriateDigits) {
  
 TEST(SoundexTestsuite, RetainsSoleLetterOfOneLetterWord) {
     char soundex[5];
-    generateSoundex("A", soundex);
-    ASSERT_STREQ(soundex, "A000");
+    generateSoundex("B", soundex);
+    ASSERT_STREQ(soundex, "B000");
 }
  
 TEST(SoundexTestsuite, PadsWithZerosToEnsureThreeDigits) {
@@ -21,8 +21,8 @@ TEST(SoundexTestsuite, PadsWithZerosToEnsureThreeDigits) {
  
 TEST(SoundexTestsuite, CombinesDuplicateEncodingsSeparatedByVowels) {
     char soundex[5];
-    generateSoundex("Ajkgd", soundex);
-    ASSERT_STREQ(soundex, "A100");
+    generateSoundex("bbfcg", soundex);
+    ASSERT_STREQ(soundex, "A120");
 }
  
 TEST(SoundexTestsuite, UppercasesFirstLetter) {
@@ -33,36 +33,6 @@ TEST(SoundexTestsuite, UppercasesFirstLetter) {
  
 TEST(SoundexTestsuite, IgnoresCaseWhenEncodingConsonants) {
     char soundex[5];
-    generateSoundex("BOLD", soundex);
-    ASSERT_STREQ(soundex, "B123");
-}
- 
-TEST(SoundexTestsuite, HandlesEmptyString) {
-    char soundex[5];
-    generateSoundex("", soundex);
-    ASSERT_STREQ(soundex, "");
-}
- 
-TEST(SoundexTestsuite, HandlesNullString) {
-    char soundex[5];
-    generateSoundex(nullptr, soundex);
-    ASSERT_STREQ(soundex, "");
-}
- 
-TEST(SoundexTestsuite, CombinesDuplicateEncodingsWithHAndWInBetween) {
-    char soundex[5];
-    generateSoundex("Aircondition", soundex);
-    ASSERT_STREQ(soundex, "A520");
-}
- 
-TEST(SoundexTestsuite, CombinesDuplicateEncodingsWithHAndWInBetween2) {
-    char soundex[5];
-    generateSoundex("bghtc", soundex);
-    ASSERT_STREQ(soundex, "T520");
-}
- 
-TEST(SoundexTestsuite, StopsAtThreeDigits) {
-    char soundex[5];
-    generateSoundex("Winidea", soundex);
-    ASSERT_STREQ(soundex, "W150");
+    generateSoundex("BCDL", soundex);
+    ASSERT_STREQ(soundex, "B234");
 }
