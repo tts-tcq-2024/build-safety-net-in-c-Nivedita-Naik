@@ -1,0 +1,7 @@
+﻿Test Name,Input,Expected Output,Description
+ReplacesConsonantsWithAppropriateDigits,"""AX""","""A200""",Verifies that the consonants are replaced with the appropriate digits.
+RetainsSoleLetterOfOneLetterWord,"""B""","""B000""",Ensures that the sole letter of a one-letter word is retained and padded with zeros.
+PadsWithZerosToEnsureThreeDigits,"""N""","""N000""",Checks if the result is padded with zeros to ensure a total of 4 characters.
+CombinesDuplicateEncodingsSeparatedByVowels,"""bbfcg""","""B200""","Validates that duplicate consonant encodings, separated by vowels, are combined."
+UppercasesFirstLetter,"""abcd""","""A123""",Ensures that the first letter is uppercased in the result.
+IgnoresCaseWhenEncodingConsonants,"""BCDL""","""B234""","Confirms that the consonants are encoded correctly, ignoring case differences."
