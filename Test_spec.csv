@@ -1,4 +1,4 @@
-﻿Testcase ID,TestCase Name,Description,Input,Expected Output,
+﻿Testcase ID,TestCase Name,Description,Input,Expected Output, 
 TC1,ReplacesConsonantsWithAppropriateDigits,Verifies that the consonants are replaced with the appropriate digits.,"""AX""","""A200""",
 TC2,RetainsSoleLetterOfOneLetterWord,Ensures that the sole letter of a one-letter word is retained and padded with zeros.,"""B""","""B000""",
 TC3,PadsWithZerosToEnsureThreeDigits,Checks if the result is padded with zeros to ensure a total of 4 characters.,"""N""","""N000""",
