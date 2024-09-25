@@ -1,0 +1,7 @@
+﻿Testcase ID,TestCase Name,Description,Input,Expected Output, 
+TC1,ReplacesConsonantsWithAppropriateDigits,Verifies that the consonants are replaced with the appropriate digits.,"""AX""","""A200""",
+TC2,RetainsSoleLetterOfOneLetterWord,Ensures that the sole letter of a one-letter word is retained and padded with zeros.,"""B""","""B000""",
+TC3,PadsWithZerosToEnsureThreeDigits,Checks if the result is padded with zeros to ensure a total of 4 characters.,"""N""","""N000""",
+TC4,CombinesDuplicateEncodingsSeparatedByVowels,"Validates that duplicate consonant encodings, separated by vowels, are combined.","""bbfcg""","""B200""",
+TC5,UppercasesFirstLetter,Ensures that the first letter is uppercased in the result.,"""abcd""","""A123""",
+TC6,IgnoresCaseWhenEncodingConsonants,"Confirms that the consonants are encoded correctly, ignoring case differences.","""BCDL""","""B234""",
